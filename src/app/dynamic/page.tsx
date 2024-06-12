@@ -6,3 +6,5 @@ function DynamicPage() {
     </div>
   );
 }
+
+export default DynamicPage;
