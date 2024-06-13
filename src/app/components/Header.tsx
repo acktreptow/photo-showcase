@@ -16,7 +16,9 @@ function Header() {
             <li>
               <Link href="/dynamic">Dynamic</Link>
             </li>
-            <li>Search</li>
+            <li>
+              <Link href="/">Search</Link>
+            </li>
           </ul>
         </nav>
       </div>
