@@ -1,6 +1,6 @@
 function Homepage() {
   return (
-    <main>
+    <main className="container mx-auto flex-grow">
       <h1>Photo showcase homepage</h1>
     </main>
   );

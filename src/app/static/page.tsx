@@ -1,6 +1,6 @@
 function StaticPage() {
   return (
-    <div>
+    <div className="container mx-auto flex-grow">
       <h1>Static Page</h1>
       <p>This is the static page</p>
     </div>
