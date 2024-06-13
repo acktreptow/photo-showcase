@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Dynamic Rendering",
+  description: "Showcasing dynamic rendering in Next.js through photos",
+};
+
 function DynamicPage() {
   return (
     <div className="container mx-auto flex-grow">
