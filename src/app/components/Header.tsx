@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <header className="container mx-auto border p-4">
+    <header className="container mx-auto border p-4 bg-teal-700 text-zinc-100">
       <div className="flex justify-between">
         <div>Photo Showcase</div>
         <nav>
