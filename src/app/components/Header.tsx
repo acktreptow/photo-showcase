@@ -1,12 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../../../public/images/logo.png";
 
 function Header() {
   return (
-    <header className="container mx-auto border p-4 bg-teal-700 text-zinc-100">
-      <div className="flex justify-between">
-        <div>Photo Showcase</div>
+    <header className="container mx-auto border p-4 bg-teal-700 text-zinc-100 text-lg">
+      <div className="flex justify-between items-center">
+        <div>
+          <Image
+            src={logo}
+            alt="Photo Showcase logo"
+            className="w-12 rounded-sm ml-2"
+          />
+        </div>
         <nav>
-          <ul className="flex space-x-2">
+          <ul className="flex space-x-3 mr-2">
             <li>
               <Link href="/">Home</Link>
             </li>
