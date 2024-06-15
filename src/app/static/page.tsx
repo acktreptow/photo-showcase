@@ -25,16 +25,20 @@ async function StaticPage() {
       <Image
         src={image.urls.regular}
         alt={image.alt_description}
-        width={300}
-        height={300}
+        width={250}
+        height={250}
         className="mx-auto rounded-lg shadow-lg mb-5"
       />
-      <div className="text-lg">
-        <p>Name: {image.user.name}</p>
-        <p>
-          Description: {image.description === null ? "N/A" : image.description}
+      <div className="border-2 border-gray-200 rounded-lg shadow-md p-4">
+        <h2 className="text-center font-semibold text-xl mb-3">
+          Photo Information
+        </h2>
+        <p className="text-lg">Name: {image.user.name}</p>
+        <p className="text-lg">
+          Description:{" "}
+          {image.description === null ? "None provided." : image.description}
         </p>
-        <p>
+        <p className="text-lg">
           Location taken: {image.location.city}, {image.location.country}
         </p>
       </div>
