@@ -16,7 +16,7 @@ async function StaticPage() {
   console.log(image);
 
   return (
-    <div className="container mx-auto flex-grow p-4">
+    <div className="container mx-auto bg-white flex-grow p-4">
       <h1 className="text-2xl text-center font-bold my-3">Static Page</h1>
       <p className="mb-5 text-lg">
         This is the static page because it fetches and caches the Unsplash API
