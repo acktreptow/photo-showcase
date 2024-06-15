@@ -26,16 +26,16 @@ async function StaticPage() {
       <Image
         src={image.urls.regular}
         alt={image.alt_description}
-        width={250}
-        height={250}
-        className="mx-auto rounded-lg shadow-lg mb-5"
+        width={256}
+        height={512}
+        className="mx-auto rounded-lg shadow-lg mb-5 w-64 md:w-80 lg:w-96"
       />
       <div className="text-center text-lg cursor mb-5 text-sky-500 font-semibold underline">
         <Link href={image.links.download} target="_blank" className="text-lg">
           <span>Download Original Photo</span>
         </Link>
       </div>
-      <div className="border-2 border-gray-200 rounded-lg shadow-md p-4">
+      <div className="border-2 border-gray-200 rounded-lg shadow-md p-4 md:w-3/4 md:mx-auto">
         <h2 className="text-center font-bold text-xl mb-3">
           Photo Information
         </h2>
