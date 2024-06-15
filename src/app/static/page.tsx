@@ -12,17 +12,28 @@ async function StaticPage() {
       process.env.UNSPLASH_ACCESS_KEY
   );
   const image = await res.json();
+  console.log(image);
 
   return (
     <div className="container mx-auto flex-grow">
       <h1>Static Page</h1>
-      <p>This is the static page</p>
+      <p className=" mb-10">This is the static page</p>
       <Image
         src={image.urls.regular}
         alt={image.alt_description}
-        width={image.width}
-        height={image.height}
+        width={400}
+        height={400}
+        className="mx-auto rounded-lg shadow-lg"
       />
+      <div>
+        <p>Name: {image.user.name}</p>
+        <p>
+          Description: {image.description === null ? "N/A" : image.description}
+        </p>
+        <p>
+          Location taken: {image.location.city}, {image.location.country}
+        </p>
+      </div>
     </div>
   );
 }
