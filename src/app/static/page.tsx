@@ -15,17 +15,21 @@ async function StaticPage() {
   console.log(image);
 
   return (
-    <div className="container mx-auto flex-grow">
-      <h1>Static Page</h1>
-      <p className=" mb-10">This is the static page</p>
+    <div className="container mx-auto flex-grow p-4">
+      <h1 className="text-2xl text-center font-bold my-3">Static Page</h1>
+      <p className="mb-5 text-lg">
+        This is the static page because it fetches and caches the Unsplash API
+        data at build time. You as the user will therefore always see the same
+        image regardless of refreshing.
+      </p>
       <Image
         src={image.urls.regular}
         alt={image.alt_description}
-        width={400}
-        height={400}
-        className="mx-auto rounded-lg shadow-lg"
+        width={300}
+        height={300}
+        className="mx-auto rounded-lg shadow-lg mb-5"
       />
-      <div>
+      <div className="text-lg">
         <p>Name: {image.user.name}</p>
         <p>
           Description: {image.description === null ? "N/A" : image.description}
