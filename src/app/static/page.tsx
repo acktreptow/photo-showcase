@@ -17,11 +17,13 @@ async function StaticPage() {
 
   return (
     <div className="container mx-auto bg-white flex-grow p-4">
-      <h1 className="text-2xl text-center font-bold my-3">Static Page</h1>
-      <p className="mb-5 text-lg">
-        This is the static page because it fetches and caches the Unsplash API
-        data at build time. You as the user will therefore always see the same
-        image regardless of refreshing.
+      <h1 className="text-2xl text-center font-bold mt-3 mb-3 md:mb-5 lg:text-4xl lg:mb-10">
+        Static Page
+      </h1>
+      <p className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-5 text-lg md:w-3/4 md:mb-7 lg:p-5 lg:mb-10 lg:w-1/2 md:mx-auto">
+        This is the <span className="font-semibold">static page</span> because
+        it fetches and caches the Unsplash API data at build time. You as the
+        user will therefore always see the same image regardless of refresh.
       </p>
       <Image
         src={image.urls.regular}
@@ -30,7 +32,7 @@ async function StaticPage() {
         height={512}
         className="mx-auto rounded-lg shadow-lg mb-5 w-64 md:w-80 lg:w-96"
       />
-      <div className="text-center text-lg cursor mb-5 text-sky-500 font-semibold underline">
+      <div className="text-center text-lg cursor mb-5 text-sky-500 font-semibold underline lg:mb-10">
         <Link href={image.links.download} target="_blank" className="text-lg">
           <span>Download Original Photo</span>
         </Link>
