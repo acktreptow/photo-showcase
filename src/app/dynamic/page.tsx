@@ -1,30 +1,11 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { UnsplashImage } from "../types/UnsplashImage";
 
 export const metadata: Metadata = {
   title: "Dynamic Rendering",
   description: "Showcasing dynamic rendering in Next.js through photos",
-};
-
-type UnsplashImage = {
-  alt_description: string;
-  description: string;
-  links: {
-    download: string;
-  };
-  location: {
-    city: string;
-    country: string;
-  };
-  urls: {
-    regular: string;
-  };
-  user: {
-    name: string;
-    username: string;
-    portfolio_url: string;
-  };
 };
 
 async function DynamicPage() {
