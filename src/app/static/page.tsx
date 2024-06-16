@@ -42,14 +42,19 @@ async function StaticPage() {
           Photo Information
         </h2>
         <p className="text-lg">
-          Taken by: {image.user.name} ({image.user.username})
+          Taken By: {image.user.name} ({image.user.username})
         </p>
-        <p className="text-lg">
+        <p className="text-lg capitalize">
           Description:{" "}
-          {image.description === null ? "None provided." : image.description}
+          {image.description === null
+            ? image.alt_description
+            : image.description}
         </p>
         <p className="text-lg">
-          Location taken: {image.location.city}, {image.location.country}
+          Location Taken:{" "}
+          {image.location.city === null || image.location.country === null
+            ? "Unknown"
+            : `${image.location.city}, ${image.location.country}`}
         </p>
         <p className="text-lg">
           Portfolio:{" "}
