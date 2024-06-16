@@ -7,13 +7,32 @@ export const metadata: Metadata = {
   description: "Showcasing static rendering in Next.js through photos",
 };
 
+type UnsplashImage = {
+  alt_description: string;
+  description: string;
+  links: {
+    download: string;
+  };
+  location: {
+    city: string;
+    country: string;
+  };
+  urls: {
+    regular: string;
+  };
+  user: {
+    name: string;
+    username: string;
+    portfolio_url: string;
+  };
+};
+
 async function StaticPage() {
   const res = await fetch(
     "https://api.unsplash.com/photos/random?client_id=" +
       process.env.UNSPLASH_ACCESS_KEY
   );
-  const image = await res.json();
-  console.log(image);
+  const image: UnsplashImage = await res.json();
 
   let locationData = "";
   if (image.location.city === null && image.location.country === null) {
