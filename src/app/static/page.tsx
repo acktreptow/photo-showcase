@@ -56,11 +56,13 @@ async function StaticPage() {
           Taken By: <span className="capitalize">{image.user.name}</span> (
           {image.user.username})
         </p>
-        <p className="text-lg capitalize">
+        <p className="text-lg">
           Description:{" "}
           {image.description === null
-            ? image.alt_description
-            : image.description}
+            ? image.alt_description.charAt(0).toUpperCase() +
+              image.alt_description.slice(1)
+            : image.description.charAt(0).toUpperCase() +
+              image.description.slice(1)}
         </p>
         <p className="text-lg">Location Taken: {locationData}</p>
         <p className="text-lg">
