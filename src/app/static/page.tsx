@@ -15,6 +15,17 @@ async function StaticPage() {
   const image = await res.json();
   console.log(image);
 
+  let locationData = "";
+  if (image.location.city === null && image.location.country === null) {
+    locationData = "Unknown";
+  } else if (image.location.city !== null && image.location.country === null) {
+    locationData = image.location.city;
+  } else if (image.location.city === null && image.location.country !== null) {
+    locationData = image.location.country;
+  } else {
+    locationData = `${image.location.city}, ${image.location.country}`;
+  }
+
   return (
     <div className="container mx-auto bg-white flex-grow p-4">
       <h1 className="text-2xl text-center font-bold mt-4 md:mt-3 mb-5 lg:text-4xl lg:mt-8 lg:mb-10">
@@ -42,7 +53,8 @@ async function StaticPage() {
           Photo Information
         </h2>
         <p className="text-lg">
-          Taken By: {image.user.name} ({image.user.username})
+          Taken By: <span className="capitalize">{image.user.name}</span> (
+          {image.user.username})
         </p>
         <p className="text-lg capitalize">
           Description:{" "}
@@ -50,17 +62,16 @@ async function StaticPage() {
             ? image.alt_description
             : image.description}
         </p>
-        <p className="text-lg">
-          Location Taken:{" "}
-          {image.location.city === null || image.location.country === null
-            ? "Unknown"
-            : `${image.location.city}, ${image.location.country}`}
-        </p>
+        <p className="text-lg">Location Taken: {locationData}</p>
         <p className="text-lg">
           Portfolio:{" "}
-          <Link href={image.user.portfolio_url} target="_blank">
-            {image.user.portfolio_url}
-          </Link>
+          {image.user.portfolio_url ? (
+            <Link href={image.user.portfolio_url} target="_blank">
+              {image.user.portfolio_url}
+            </Link>
+          ) : (
+            "None Provided"
+          )}
         </p>
       </div>
     </div>
