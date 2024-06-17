@@ -1,5 +1,13 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import { UnsplashImage } from "../../types/UnsplashImage";
+
+export function generateMetadata({ params: { topic } }: any): Metadata {
+  return {
+    title: `${topic[0].toUpperCase()}${topic.slice(1)}`,
+    description: `Showcasing photos of ${topic} from Unsplash`,
+  };
+}
 
 async function TopicPage({ params: { topic } }: any) {
   const res = await fetch(
