@@ -22,9 +22,13 @@ async function TopicPage({ params: { topic } }: any) {
         {topic}
       </h1>
       <p className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-7 text-lg md:w-3/4 lg:p-5 lg:mb-10  md:mx-auto">
-        This is the <span className="font-semibold">static page</span> because
-        it fetches and caches the Unsplash API data at build time. You as the
-        user will therefore always see the same image regardless of refresh.
+        This is the <span className="font-semibold">topics page</span> because
+        it uses the topic parameter to fetch images from the Unsplash API. While
+        the dog images are static because they were fetched and cached at build
+        time, other topics will be dynamic. <br />
+        Replace dogs with another topic in the URL to see images of that topic.
+        These will be fetched and rendered on first access and then cached for
+        subsequent visits (the photos will not change on refresh).
       </p>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 border">
         {images.map((image: any) => (
