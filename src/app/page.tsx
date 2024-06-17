@@ -5,9 +5,18 @@ import homepageImg from "../../public/images/homepage-photo.png";
 import { useState } from "react";
 
 function Homepage() {
+  const [selectedPage, setSelectedPage] = useState("");
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    if (selectedPage) {
+      window.location.href = `/${selectedPage}`;
+    }
+  };
+
   const pages = [
-    { name: "Static", urlPath: "/static" },
-    { name: "Dynamic", urlPath: "/dynamic" },
+    { name: "Static", urlPath: "static" },
+    { name: "Dynamic", urlPath: "dynamic" },
   ];
 
   return (
@@ -27,11 +36,16 @@ function Homepage() {
       <p className="font-semibold text-center text-2xl mb-5">
         Enjoy the showcase!
       </p>
-      <form>
-        <select>
+      <form onSubmit={handleSubmit}>
+        <select
+          value={selectedPage}
+          onChange={(e) => setSelectedPage(e.target.value)}
+        >
           <option>Pick a Page</option>
           {pages.map((page) => (
-            <option key={page.name}>{page.name}</option>
+            <option key={page.name} value={page.urlPath}>
+              {page.name}
+            </option>
           ))}
         </select>
         <button type="submit">Go to Page</button>
