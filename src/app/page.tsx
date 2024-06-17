@@ -17,6 +17,7 @@ function Homepage() {
   const pages = [
     { name: "Static", urlPath: "static" },
     { name: "Dynamic", urlPath: "dynamic" },
+    { name: "Dogs", urlPath: "topics/dogs" },
   ];
 
   return (

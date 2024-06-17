@@ -7,11 +7,13 @@ function Header() {
     <header className="container mx-auto border p-4 bg-teal-700 text-zinc-100 text-lg">
       <div className="flex justify-between items-center">
         <div>
-          <Image
-            src={logo}
-            alt="Photo Showcase logo"
-            className="w-12 rounded-sm ml-2"
-          />
+          <Link href="/">
+            <Image
+              src={logo}
+              alt="Photo Showcase logo"
+              className="w-12 rounded-sm ml-2"
+            />
+          </Link>
         </div>
         <nav>
           <ul className="flex space-x-3 mr-2">
@@ -25,7 +27,7 @@ function Header() {
               <Link href="/dynamic">Dynamic</Link>
             </li>
             <li>
-              <Link href="/">Search</Link>
+              <Link href="/topics/dogs">Dogs</Link>
             </li>
           </ul>
         </nav>
