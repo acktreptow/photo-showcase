@@ -1,7 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import homepageImg from "../../public/images/homepage-photo.png";
+import { useState } from "react";
 
 function Homepage() {
+  const pages = [
+    { name: "Static", urlPath: "/static" },
+    { name: "Dynamic", urlPath: "/dynamic" },
+  ];
+
   return (
     <main className="bg-white container mx-auto flex-grow p-4">
       <h1 className="text-4xl text-center my-10 font-bold">Photo Showcase</h1>
@@ -16,9 +24,19 @@ function Homepage() {
         alt="A man taking photos in nature"
         className="rounded-lg md:w-3/4 mx-auto shadow-lg mb-10"
       />
-      <p className="font-semibold text-center text-2xl">Enjoy the showcase!</p>
+      <p className="font-semibold text-center text-2xl mb-5">
+        Enjoy the showcase!
+      </p>
+      <form>
+        <select>
+          <option>Pick a Page</option>
+          {pages.map((page) => (
+            <option key={page.name}>{page.name}</option>
+          ))}
+        </select>
+        <button type="submit">Go to Page</button>
+      </form>
     </main>
   );
 }
-
 export default Homepage;
