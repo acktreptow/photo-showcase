@@ -10,8 +10,7 @@ export const metadata: Metadata = {
 
 async function StaticPage() {
   const res = await fetch(
-    "https://api.unsplash.com/photos/random?client_id=" +
-      process.env.UNSPLASH_ACCESS_KEY
+    `https://api.unsplash.com/photos/random?client_id=${process.env.UNSPLASH_ACCESS_KEY}`
   );
   const image: UnsplashImage = await res.json();
 
