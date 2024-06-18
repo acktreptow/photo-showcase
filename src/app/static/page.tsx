@@ -45,7 +45,7 @@ async function StaticPage(): Promise<JSX.Element> {
         height={512}
         className="mx-auto rounded-lg shadow-lg mb-5 w-64 md:w-80 lg:w-96"
       />
-      <div className="text-center text-lg cursor mb-10 text-sky-500 font-semibold underline">
+      <div className="text-center text-lg cursor mb-7 text-sky-500 font-semibold underline lg:mb-10">
         <Link
           href={image.links.download}
           target="_blank"
