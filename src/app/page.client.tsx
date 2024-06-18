@@ -69,7 +69,7 @@ function HomepageClient() {
       <Image
         src={homepageImg}
         alt="A man taking photos in nature"
-        className="rounded-lg md:w-3/4 mx-auto shadow-lg"
+        className="rounded-lg mx-auto shadow-lg mb-5 md:w-3/4 lg:mb-10"
       />
     </main>
   );
