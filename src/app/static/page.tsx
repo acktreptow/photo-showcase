@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Showcasing static rendering in Next.js through photos",
 };
 
-async function StaticPage() {
+async function StaticPage(): Promise<JSX.Element> {
   const res = await fetch(
     `https://api.unsplash.com/photos/random?client_id=${process.env.UNSPLASH_ACCESS_KEY}`
   );
