@@ -33,10 +33,11 @@ async function DynamicPage(): Promise<JSX.Element> {
       </h1>
       <div className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-7 text-lg md:mx-auto md:w-3/4 lg:p-5 lg:mb-10 lg:text-xl">
         <p>
-          This is the <span className="font-semibold">dynamic page</span>{" "}
-          because it doesn&#39;t cache the image that is fetched from the
-          Unsplash API. You as the user will therefore always see a new image
-          with every refresh.
+          This is the{" "}
+          <span className="font-semibold underline">dynamic page</span> because
+          it doesn&#39;t cache the image that is fetched from the Unsplash API.
+          You as the user will therefore always see a new image with every
+          refresh.
         </p>
       </div>
       <Image

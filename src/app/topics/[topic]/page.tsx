@@ -24,12 +24,13 @@ async function TopicPage({
 
   return (
     <div className="container mx-auto bg-white flex-grow p-4">
-      <h1 className="text-2xl text-center font-bold mt-4 md:mt-3 mb-5 lg:text-4xl lg:mt-8 lg:mb-10 capitalize">
+      <h1 className="text-4xl font-bold mt-5 mb-7 text-center lg:text-6xl lg:my-10 capitalize">
         {topic}
       </h1>
-      <div className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-7 text-lg md:w-3/4 lg:p-5 lg:mb-10  md:mx-auto">
+      <div className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-7 text-lg md:mx-auto md:w-3/4 lg:p-5 lg:mb-10 lg:text-xl">
         <p className="mb-5">
-          This is the <span className="font-semibold">topics page</span> because
+          This is the{" "}
+          <span className="font-semibold underline">topics page</span> because
           it uses the topic parameter to fetch images from the Unsplash API.
           While the dog images are static because they were fetched and cached
           at build time, other topics will be dynamic.
