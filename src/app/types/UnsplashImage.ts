@@ -10,6 +10,7 @@ export type UnsplashImage = {
   };
   urls: {
     regular: string;
+    raw?: string;
   };
   user: {
     name: string;

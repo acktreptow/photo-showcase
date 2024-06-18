@@ -2,14 +2,20 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { UnsplashImage } from "../../types/UnsplashImage";
 
-export function generateMetadata({ params: { topic } }: any): Metadata {
+type TopicParams = {
+  params: { topic: string };
+};
+
+export function generateMetadata({ params: { topic } }: TopicParams): Metadata {
   return {
     title: `${topic[0].toUpperCase()}${topic.slice(1)}`,
     description: `Showcasing photos of ${topic} from Unsplash`,
   };
 }
 
-async function TopicPage({ params: { topic } }: any) {
+async function TopicPage({
+  params: { topic },
+}: TopicParams): Promise<JSX.Element> {
   const res = await fetch(
     `https://api.unsplash.com/photos/random?query=${topic}&count=12&client_id=${process.env.UNSPLASH_ACCESS_KEY}`
   );
@@ -31,12 +37,12 @@ async function TopicPage({ params: { topic } }: any) {
         subsequent visits (the photos will not change on refresh).
       </p>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 border">
-        {images.map((image: any) => (
+        {images.map((image: UnsplashImage) => (
           <Image
             src={image.urls.regular}
             width={200}
             height={200}
-            alt={image.description}
+            alt={image.alt_description}
             key={image.urls.raw}
             className="w-full h-full object-cover"
           />
