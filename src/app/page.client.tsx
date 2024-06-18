@@ -22,10 +22,10 @@ function HomepageClient() {
 
   return (
     <main className="bg-white container mx-auto flex-grow p-4">
-      <h1 className="text-4xl font-bold mt-5 mb-10 text-center lg:my-10 lg:text-6xl">
+      <h1 className="text-4xl font-bold mt-5 mb-7 text-center lg:text-6xl lg:my-10">
         Photo Showcase
       </h1>
-      <div className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-10 text-lg md:w-3/4 lg:p-5 md:mx-auto">
+      <div className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-10 text-lg md:mx-auto md:w-3/4 lg:p-5 lg:text-xl">
         <p className="mb-3 text-center">
           Photo Showcase is a Next.js application that fetches and caches data
           differently depending on the page you visit.
