@@ -48,7 +48,7 @@ async function TopicPage({
             height={200}
             alt={image.alt_description}
             key={image.urls.raw}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-lg"
           />
         ))}
       </div>

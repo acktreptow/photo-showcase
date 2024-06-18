@@ -25,12 +25,27 @@ function Homepage() {
       <h1 className="text-4xl font-bold mt-5 mb-10 text-center lg:my-10 lg:text-6xl">
         Photo Showcase
       </h1>
-      <p className="bg-teal-700 text-center rounded-lg text-zinc-100 p-3 mb-10 text-lg md:w-3/4 lg:p-5 md:mx-auto">
-        Photo Showcase is a Next.js application that fetches and caches data
-        differently depending on the page you visit. There is both static and
-        dynamic data fetching. The dynamic page fetches data at runtime, while
-        the static page fetches data at build time.
-      </p>
+      <div className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-10 text-lg md:w-3/4 lg:p-5 md:mx-auto">
+        <p className="mb-3">
+          Photo Showcase is a Next.js application that fetches and caches data
+          differently depending on the page you visit.
+        </p>
+        <ul className=" list-disc ml-5">
+          <li className="mb-1">
+            The <span className="font-semibold">static page</span> fetches and
+            caches the Unsplash API data at build time.
+          </li>
+          <li className="mb-1">
+            The <span className="font-semibold">dynamic page</span> fetches the
+            API data at runtime and doesn&#39;t cache it.
+          </li>
+          <li className="mb-1">
+            The <span className="font-semibold">dogs page</span> fetches/caches
+            the dog images at build time, but all other topics are
+            fetched/cached at runtime.
+          </li>
+        </ul>
+      </div>
       <form onSubmit={handleSubmit} className="text-xl mb-10 lg:tracking-wide">
         <select
           value={selectedPage}
