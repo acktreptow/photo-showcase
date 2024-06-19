@@ -2,16 +2,17 @@
 
 import Image from "next/image";
 import homepageImg from "../../public/images/homepage-photo.png";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import Container from "./components/Container";
 import Title from "./components/Title";
 import TextBox from "./components/TextBox";
 import Span from "./components/Span";
 
-function HomepageClient() {
-  const [selectedPage, setSelectedPage] = useState("");
+function HomepageClient(): JSX.Element {
+  const [selectedPage, setSelectedPage] = useState<string>("");
+  const [hidden, setHidden] = useState<boolean>(false);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (selectedPage) {
       window.location.href = `/${selectedPage}`;
@@ -30,8 +31,8 @@ function HomepageClient() {
       <Title title="Photo Showcase" />
       <TextBox>
         <p className="mb-3 text-center">
-          Photo Showcase is a Next.js application that fetches and caches data
-          differently depending on the page you visit.
+          Photo Showcase is a Next.js app that fetches and caches data
+          differently depending on the page visited.
         </p>
         <ul className="list-disc ml-5">
           <li className="mb-1">
@@ -43,8 +44,8 @@ function HomepageClient() {
             doesn&#39;t cache it.
           </li>
           <li className="mb-1">
-            The <Span page="isr" /> splits the difference between the static and
-            dynamic rendering methods.
+            The <Span page="isr" /> splits the difference between the
+            static/dynamic methods.
           </li>
           <li className="mb-1">
             The <Span page="dogs" /> fetches/caches the dog images at build
@@ -55,10 +56,15 @@ function HomepageClient() {
       <form onSubmit={handleSubmit} className="text-xl mb-10 lg:tracking-wide">
         <select
           value={selectedPage}
-          onChange={(e) => setSelectedPage(e.target.value)}
+          onChange={(e: ChangeEvent<HTMLSelectElement>) => {
+            setSelectedPage(e.target.value);
+            setHidden(true);
+          }}
           className="block mx-auto border-4 border-gray-500 rounded-lg p-2 mb-3 hover:border-playstation transition-colors duration-200 text-gray-800 shadow-md focus:outline-none"
         >
-          <option value="">Select Showcase</option>
+          <option value="" className={`${hidden ? "hidden" : ""}`}>
+            Select Showcase
+          </option>
           {pages.map((page) => (
             <option key={page.name} value={page.urlPath}>
               {page.name}
