@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { UnsplashImage } from "../types/UnsplashImage";
+import Container from "../components/Container";
 
 export const metadata: Metadata = {
   title: "Dynamic Rendering",
@@ -27,7 +28,7 @@ async function DynamicPage(): Promise<JSX.Element> {
   }
 
   return (
-    <div className="container mx-auto bg-white flex-grow p-4">
+    <Container>
       <h1 className="text-4xl font-bold mt-5 mb-7 text-center lg:text-6xl lg:my-10">
         Dynamic Page
       </h1>
@@ -84,7 +85,7 @@ async function DynamicPage(): Promise<JSX.Element> {
           )}
         </p>
       </div>
-    </div>
+    </Container>
   );
 }
 
