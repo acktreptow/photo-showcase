@@ -31,15 +31,15 @@ async function TopicPage({
       <Title title={topic} />
       <TextBox>
         <p className="mb-5">
-          This is the <Span page="topics" /> because it uses the topic parameter
-          to fetch images from the Unsplash API. While the dog images are static
-          because they were fetched and cached at build time, other topics will
-          be dynamic.
+          The <Span page="topics" /> uses the topic parameter to fetch 12
+          related images from the Unsplash API. While the dog images are static
+          because they were fetched/cached at build time, other topics are
+          dynamic.
         </p>
         <p>
-          Replace dogs with another topic in the URL to see images of that
-          topic. These will be fetched and rendered on first access and then
-          cached for subsequent visits (the photos will not change on refresh).
+          Try it yourself! Replace dogs with a new topic in the URL to see
+          images of that topic. These are fetched/rendered on first access, then
+          cached for subsequent visits (images won&#39;t change on refresh).
         </p>
       </TextBox>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:p-5 lg:p-10">
