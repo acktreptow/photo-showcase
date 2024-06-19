@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { UnsplashImage } from "../types/UnsplashImage";
 import Container from "../components/Container";
+import Title from "../components/Title";
 
 export const metadata: Metadata = {
   title: "Static Rendering",
@@ -28,9 +29,7 @@ async function StaticPage(): Promise<JSX.Element> {
 
   return (
     <Container>
-      <h1 className="text-4xl font-bold mt-5 mb-7 text-center lg:text-6xl lg:my-10">
-        Static Page
-      </h1>
+      <Title title="Static Page" />
       <div className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-7 text-lg md:mx-auto md:w-3/4 lg:p-5 lg:mb-10 lg:text-xl">
         <p>
           This is the{" "}

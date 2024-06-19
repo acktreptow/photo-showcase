@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { UnsplashImage } from "../../types/UnsplashImage";
 import Container from "@/app/components/Container";
+import Title from "@/app/components/Title";
 
 type TopicParams = {
   params: { topic: string };
@@ -25,9 +26,7 @@ async function TopicPage({
 
   return (
     <Container>
-      <h1 className="text-4xl font-bold mt-5 mb-7 text-center lg:text-6xl lg:my-10 capitalize">
-        {topic}
-      </h1>
+      <Title title={topic} />
       <div className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-7 text-lg md:mx-auto md:w-3/4 lg:p-5 lg:mb-10 lg:text-xl">
         <p className="mb-5">
           This is the{" "}
