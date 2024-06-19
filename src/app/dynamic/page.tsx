@@ -4,6 +4,7 @@ import Link from "next/link";
 import { UnsplashImage } from "../types/UnsplashImage";
 import Container from "../components/Container";
 import Title from "../components/Title";
+import TextBox from "../components/TextBox";
 
 export const metadata: Metadata = {
   title: "Dynamic Rendering",
@@ -31,7 +32,7 @@ async function DynamicPage(): Promise<JSX.Element> {
   return (
     <Container>
       <Title title="Dynamic Page" />
-      <div className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-7 text-lg md:mx-auto md:w-3/4 lg:p-5 lg:mb-10 lg:text-xl">
+      <TextBox>
         <p>
           This is the{" "}
           <span className="font-semibold underline">dynamic page</span> because
@@ -39,7 +40,7 @@ async function DynamicPage(): Promise<JSX.Element> {
           You as the user will therefore always see a new image with every
           refresh.
         </p>
-      </div>
+      </TextBox>
       <Image
         src={image.urls.regular}
         alt={image.alt_description}

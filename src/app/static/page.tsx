@@ -4,6 +4,7 @@ import Link from "next/link";
 import { UnsplashImage } from "../types/UnsplashImage";
 import Container from "../components/Container";
 import Title from "../components/Title";
+import TextBox from "../components/TextBox";
 
 export const metadata: Metadata = {
   title: "Static Rendering",
@@ -30,14 +31,14 @@ async function StaticPage(): Promise<JSX.Element> {
   return (
     <Container>
       <Title title="Static Page" />
-      <div className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-7 text-lg md:mx-auto md:w-3/4 lg:p-5 lg:mb-10 lg:text-xl">
+      <TextBox>
         <p>
           This is the{" "}
           <span className="font-semibold underline">static page</span> because
           it fetches and caches the Unsplash API data at build time. You as the
           user will therefore always see the same image regardless of refresh.
         </p>
-      </div>
+      </TextBox>
       <Image
         src={image.urls.regular}
         alt={image.alt_description}

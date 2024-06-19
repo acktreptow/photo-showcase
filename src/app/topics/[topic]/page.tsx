@@ -3,6 +3,7 @@ import Image from "next/image";
 import { UnsplashImage } from "../../types/UnsplashImage";
 import Container from "@/app/components/Container";
 import Title from "@/app/components/Title";
+import TextBox from "@/app/components/TextBox";
 
 type TopicParams = {
   params: { topic: string };
@@ -27,7 +28,7 @@ async function TopicPage({
   return (
     <Container>
       <Title title={topic} />
-      <div className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-7 text-lg md:mx-auto md:w-3/4 lg:p-5 lg:mb-10 lg:text-xl">
+      <TextBox>
         <p className="mb-5">
           This is the{" "}
           <span className="font-semibold underline">topics page</span> because
@@ -40,7 +41,7 @@ async function TopicPage({
           topic. These will be fetched and rendered on first access and then
           cached for subsequent visits (the photos will not change on refresh).
         </p>
-      </div>
+      </TextBox>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:p-5 lg:p-10">
         {images.map((image: UnsplashImage) => (
           <Image

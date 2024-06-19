@@ -5,6 +5,7 @@ import homepageImg from "../../public/images/homepage-photo.png";
 import { useState } from "react";
 import Container from "./components/Container";
 import Title from "./components/Title";
+import TextBox from "./components/TextBox";
 
 function HomepageClient() {
   const [selectedPage, setSelectedPage] = useState("");
@@ -25,12 +26,12 @@ function HomepageClient() {
   return (
     <Container>
       <Title title="Photo Showcase" />
-      <div className="bg-teal-700 rounded-lg text-zinc-100 p-3 mb-10 text-lg md:mx-auto md:w-3/4 lg:p-5 lg:text-xl">
+      <TextBox>
         <p className="mb-3 text-center">
           Photo Showcase is a Next.js application that fetches and caches data
           differently depending on the page you visit.
         </p>
-        <ul className=" list-disc ml-5">
+        <ul className="list-disc ml-5">
           <li className="mb-1">
             The <span className="font-semibold underline">static page</span>{" "}
             fetches and caches the Unsplash API data at build time.
@@ -45,7 +46,7 @@ function HomepageClient() {
             are fetched/cached at runtime.
           </li>
         </ul>
-      </div>
+      </TextBox>
       <form onSubmit={handleSubmit} className="text-xl mb-10 lg:tracking-wide">
         <select
           value={selectedPage}
