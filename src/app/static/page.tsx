@@ -5,6 +5,7 @@ import { UnsplashImage } from "../types/UnsplashImage";
 import Container from "../components/Container";
 import Title from "../components/Title";
 import TextBox from "../components/TextBox";
+import Span from "../components/Span";
 
 export const metadata: Metadata = {
   title: "Static Rendering",
@@ -33,10 +34,9 @@ async function StaticPage(): Promise<JSX.Element> {
       <Title title="Static Page" />
       <TextBox>
         <p>
-          This is the{" "}
-          <span className="font-semibold underline">static page</span> because
-          it fetches and caches the Unsplash API data at build time. You as the
-          user will therefore always see the same image regardless of refresh.
+          This is the <Span page="static" /> because it fetches and caches the
+          Unsplash API data at build time. You as the user will therefore always
+          see the same image regardless of refresh.
         </p>
       </TextBox>
       <Image

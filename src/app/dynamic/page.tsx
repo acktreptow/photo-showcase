@@ -5,6 +5,7 @@ import { UnsplashImage } from "../types/UnsplashImage";
 import Container from "../components/Container";
 import Title from "../components/Title";
 import TextBox from "../components/TextBox";
+import Span from "../components/Span";
 
 export const metadata: Metadata = {
   title: "Dynamic Rendering",
@@ -34,11 +35,9 @@ async function DynamicPage(): Promise<JSX.Element> {
       <Title title="Dynamic Page" />
       <TextBox>
         <p>
-          This is the{" "}
-          <span className="font-semibold underline">dynamic page</span> because
-          it doesn&#39;t cache the image that is fetched from the Unsplash API.
-          You as the user will therefore always see a new image with every
-          refresh.
+          This is the <Span page="dynamic" /> because it doesn&#39;t cache the
+          image that is fetched from the Unsplash API. You as the user will
+          therefore always see a new image with every refresh.
         </p>
       </TextBox>
       <Image

@@ -6,6 +6,7 @@ import { useState } from "react";
 import Container from "./components/Container";
 import Title from "./components/Title";
 import TextBox from "./components/TextBox";
+import Span from "./components/Span";
 
 function HomepageClient() {
   const [selectedPage, setSelectedPage] = useState("");
@@ -33,17 +34,16 @@ function HomepageClient() {
         </p>
         <ul className="list-disc ml-5">
           <li className="mb-1">
-            The <span className="font-semibold underline">static page</span>{" "}
-            fetches and caches the Unsplash API data at build time.
+            The <Span page="static" /> fetches and caches the Unsplash API data
+            at build time.
           </li>
           <li className="mb-1">
-            The <span className="font-semibold underline">dynamic page</span>{" "}
-            fetches the API data at runtime and doesn&#39;t cache it.
+            The <Span page="dynamic" /> fetches the API data at runtime and
+            doesn&#39;t cache it.
           </li>
           <li className="mb-1">
-            The <span className="font-semibold underline">dogs page</span>{" "}
-            fetches/caches the dog images at build time, but all other topics
-            are fetched/cached at runtime.
+            The <Span page="dogs" /> fetches/caches the dog images at build
+            time, but all other topics are fetched/cached at runtime.
           </li>
         </ul>
       </TextBox>

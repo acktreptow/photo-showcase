@@ -4,6 +4,7 @@ import { UnsplashImage } from "../../types/UnsplashImage";
 import Container from "@/app/components/Container";
 import Title from "@/app/components/Title";
 import TextBox from "@/app/components/TextBox";
+import Span from "@/app/components/Span";
 
 type TopicParams = {
   params: { topic: string };
@@ -30,11 +31,10 @@ async function TopicPage({
       <Title title={topic} />
       <TextBox>
         <p className="mb-5">
-          This is the{" "}
-          <span className="font-semibold underline">topics page</span> because
-          it uses the topic parameter to fetch images from the Unsplash API.
-          While the dog images are static because they were fetched and cached
-          at build time, other topics will be dynamic.
+          This is the <Span page="topics" /> because it uses the topic parameter
+          to fetch images from the Unsplash API. While the dog images are static
+          because they were fetched and cached at build time, other topics will
+          be dynamic.
         </p>
         <p>
           Replace dogs with another topic in the URL to see images of that
