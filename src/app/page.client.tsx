@@ -21,6 +21,7 @@ function HomepageClient() {
   const pages = [
     { name: "Static", urlPath: "static" },
     { name: "Dynamic", urlPath: "dynamic" },
+    { name: "ISR", urlPath: "isr" },
     { name: "Dogs", urlPath: "topics/dogs" },
   ];
 
@@ -40,6 +41,10 @@ function HomepageClient() {
           <li className="mb-1">
             The <Span page="dynamic" /> fetches the API data at runtime and
             doesn&#39;t cache it.
+          </li>
+          <li className="mb-1">
+            The <Span page="isr" /> splits the difference between the static and
+            dynamic rendering methods.
           </li>
           <li className="mb-1">
             The <Span page="dogs" /> fetches/caches the dog images at build
