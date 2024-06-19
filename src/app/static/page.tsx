@@ -79,7 +79,7 @@ async function StaticPage(): Promise<JSX.Element> {
               {image.user.portfolio_url}
             </Link>
           ) : (
-            "None Provided"
+            "None provided"
           )}
         </p>
       </div>
