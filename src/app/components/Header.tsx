@@ -12,6 +12,7 @@ function Header(): JSX.Element {
     { name: "Home", urlPath: "/" },
     { name: "Static", urlPath: "/static" },
     { name: "Dynamic", urlPath: "/dynamic" },
+    { name: "ISR", urlPath: "/isr" },
     { name: "Dogs", urlPath: "/topics/dogs" },
   ];
 
