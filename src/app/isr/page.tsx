@@ -35,11 +35,9 @@ async function IsrPage(): Promise<JSX.Element> {
       <Title title="ISR Page" />
       <TextBox>
         <p className="mb-5">
-          This is the <Span page="incremental static regeneration" /> because it
-          splits the difference between the static and dynamic rendering
-          methods. At first, the page is generated statically, but it can be
-          regenerated after a minimum of 5 seconds to fetch a new image from the
-          Unsplash API.
+          The <Span page="incremental static regeneration" /> is a hybrid of the
+          static/dynamic methods. The page is generated statically, but it can
+          regenerate after 5 seconds to fetch a new image from the Unsplash API.
         </p>
         <p>
           You will however need to refresh the page to see the new image because
