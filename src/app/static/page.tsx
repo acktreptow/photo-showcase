@@ -35,8 +35,8 @@ async function StaticPage(): Promise<JSX.Element> {
       <TextBox>
         <p>
           This is the <Span page="static" /> because it fetches and caches the
-          Unsplash API data at build time. You as the user will therefore always
-          see the same image regardless of refresh.
+          Unsplash API data at build time. You will therefore always see the
+          same image, even if the page refreshes.
         </p>
       </TextBox>
       <Image
