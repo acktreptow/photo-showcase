@@ -47,11 +47,16 @@ function HomepageClient(): JSX.Element {
             The <Span page="isr" /> splits the difference between the
             static/dynamic methods.
           </li>
-          <li className="mb-1">
+          <li className="mb-3">
             The <Span page="dogs" /> fetches/caches the dog images at build
             time, but all other topics are fetched/cached at runtime.
           </li>
         </ul>
+        <p className="text-center">
+          PS: Unsplash has a limit of 50 photo requests per hour, so you might
+          start seeing error messages by refreshing certain pages too much in
+          that hour.
+        </p>
       </TextBox>
       <form onSubmit={handleSubmit} className="text-xl mb-10 lg:tracking-wide">
         <select
