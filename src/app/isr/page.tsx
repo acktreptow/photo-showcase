@@ -39,13 +39,14 @@ async function IsrPage(): Promise<JSX.Element> {
           static/dynamic methods. The page is generated statically, but it can
           regenerate after 5 seconds to fetch a new image from the Unsplash API.
         </p>
+        <p className="mb-5">
+          A page refresh is however needed to see the new image because it
+          can&#39;t update content without a new request.
+        </p>
         <p>
-          You will however need to refresh the page to see the new image because
-          the page is statically served to you, so it can&#39;t update content
-          without a new request. Additionally, doing so will not cause the
-          entire page to be regenerated, only dynamic parts such as the image
-          and its data. There will be no change if the refresh occurs within the
-          5 second window.
+          Doing so will also not cause the full page to regenerate, only dynamic
+          parts such as the image and its data. There will be no change if the
+          refresh occurs within 5 seconds.
         </p>
       </TextBox>
       <Image
