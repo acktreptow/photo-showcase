@@ -52,11 +52,6 @@ function HomepageClient(): JSX.Element {
             time, but all other topics are fetched/cached at runtime.
           </li>
         </ul>
-        <p className="text-center">
-          PS: Unsplash has a limit of 50 photo requests per hour, so you might
-          start seeing error messages by refreshing certain pages too much in
-          that hour.
-        </p>
       </TextBox>
       <form onSubmit={handleSubmit} className="text-xl mb-10 lg:tracking-wide">
         <select
