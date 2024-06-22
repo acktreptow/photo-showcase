@@ -1,20 +1,17 @@
-import Container from "../components/Container";
-import Title from "../components/Title";
-import TextBox from "../components/TextBox";
+import SearchPageClient from "./page.client";
 
-function SearchPage() {
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Client Side Rendering",
+  description: "Showcasing dynamic rendering in Next.js through photos",
+};
+
+function SearchPage(): JSX.Element {
   return (
-    <Container>
-      <Title title="Search" />
-      <TextBox>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum,
-          corporis non! Tempora, distinctio? Minus nihil aspernatur enim
-          adipisci hic, quas iure laboriosam fuga tempore impedit, animi porro
-          dolore accusamus? Voluptatum.
-        </p>
-      </TextBox>
-    </Container>
+    <div>
+      <SearchPageClient />
+    </div>
   );
 }
 
