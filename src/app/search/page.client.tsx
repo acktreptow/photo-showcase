@@ -20,7 +20,20 @@ function SearchPageClient() {
     const searchQuery = formData.get("searchQuery")?.toString().trim();
 
     if (searchQuery) {
-      alert(searchQuery);
+      try {
+        setSearchResults(null);
+        setSearchResultsError(false);
+        setSearchResultsLoading(true);
+
+        const res = await fetch(`/api/search?query=${searchQuery}`);
+        const images: UnsplashImage[] = await res.json();
+        setSearchResults(images);
+      } catch (error) {
+        console.error(error);
+        setSearchResultsError(true);
+      } finally {
+        setSearchResultsLoading(false);
+      }
     }
   }
 
