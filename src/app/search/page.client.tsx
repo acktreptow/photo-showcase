@@ -44,21 +44,26 @@ function SearchPageClient() {
       <TextBox>
         <p>This title is rendered client side.</p>
       </TextBox>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="searchQuery">Search Query: </label>
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col items-center text-xl lg:tracking-wide"
+      >
+        <label htmlFor="searchQuery" className="font-semibold mb-1">
+          Search Query:{" "}
+        </label>
         <input
           type="text"
           id="searchQuery"
           name="searchQuery"
-          placeholder="puppies, pizza etc"
-          className="border"
+          placeholder="puppies, pancakes etc"
+          className="block mx-auto border-4 border-gray-500 rounded-lg p-2 mb-5 hover:border-teal-900 transition-colors duration-200 text-gray-800 shadow-md focus:outline-none"
         />
         <button
           type="submit"
-          className="border"
+          className="block mx-auto border p-4 mb-5 bg-teal-700 text-white rounded-full hover:bg-teal-900 transition-colors duration-200 shadow-md shadow-teal-700"
           disabled={searchResultsLoading}
         >
-          Search
+          View Your Photo Showcase
         </button>
       </form>
 
