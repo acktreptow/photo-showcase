@@ -3,8 +3,17 @@
 import Container from "../components/Container";
 import TextBox from "../components/TextBox";
 import Title from "../components/Title";
+import { useState } from "react";
+import { UnsplashImage } from "../types/UnsplashImage";
 
 function SearchPageClient() {
+  const [searchResults, setSearchResults] = useState<UnsplashImage[] | null>(
+    null
+  );
+  const [searchResultsLoading, setSearchResultsLoading] =
+    useState<boolean>(false);
+  const [searchResultsError, setSearchResultsError] = useState<boolean>(false);
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
