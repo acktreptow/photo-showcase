@@ -7,7 +7,7 @@ type UnsplashSearchResponse = {
 
 export async function GET(request: Request): Promise<NextResponse> {
   const { searchParams } = new URL(request.url);
-  const searchQuery = searchParams.get("searchQuery");
+  const searchQuery = searchParams.get("query");
 
   if (!searchQuery) {
     return NextResponse.json(
@@ -22,5 +22,5 @@ export async function GET(request: Request): Promise<NextResponse> {
 
   const { results }: UnsplashSearchResponse = await res.json();
 
-  return NextResponse.json({ results });
+  return NextResponse.json(results);
 }
