@@ -8,11 +8,7 @@ export const metadata: Metadata = {
 };
 
 function SearchPage(): JSX.Element {
-  return (
-    <div>
-      <SearchPageClient />
-    </div>
-  );
+  return <SearchPageClient />;
 }
 
 export default SearchPage;

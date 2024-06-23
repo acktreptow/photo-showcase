@@ -6,7 +6,6 @@ import Title from "../components/Title";
 import { useState } from "react";
 import { UnsplashImage } from "../types/UnsplashImage";
 import Image from "next/image";
-import { NextResponse } from "next/server";
 
 function SearchPageClient(): JSX.Element {
   const [searchResults, setSearchResults] = useState<UnsplashImage[] | null>(
