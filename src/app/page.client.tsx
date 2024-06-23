@@ -7,6 +7,8 @@ import Container from "./components/Container";
 import Title from "./components/Title";
 import TextBox from "./components/TextBox";
 import Span from "./components/Span";
+import linksData from "../app/data/links.json";
+import { pageLink } from "../app/types/PageLink";
 
 function HomepageClient(): JSX.Element {
   const [selectedPage, setSelectedPage] = useState<string>("");
@@ -15,17 +17,9 @@ function HomepageClient(): JSX.Element {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (selectedPage) {
-      window.location.href = `/${selectedPage}`;
+      window.location.href = `${selectedPage}`;
     }
   };
-
-  const pages = [
-    { name: "Static", urlPath: "static"},
-    { name: "Dynamic", urlPath: "dynamic" },
-    { name: "ISR", urlPath: "isr" },
-    { name: "Dogs", urlPath: "topics/dogs" },
-    { name: "Search", urlPath: "search" },
-  ];
 
   return (
     <Container>
@@ -66,11 +60,13 @@ function HomepageClient(): JSX.Element {
           <option value="" className={`${hidden ? "hidden" : ""}`}>
             Select Showcase
           </option>
-          {pages.map((page) => (
-            <option key={page.name} value={page.urlPath}>
-              {page.name}
-            </option>
-          ))}
+          {linksData
+            .filter((link: pageLink) => link.name !== "Home")
+            .map((link: pageLink) => (
+              <option key={link.name} value={link.urlPath}>
+                {link.name}
+              </option>
+            ))}
         </select>
         <button
           type="submit"
