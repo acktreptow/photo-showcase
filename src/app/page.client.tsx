@@ -42,9 +42,14 @@ function HomepageClient(): JSX.Element {
             The <Span page="isr" /> splits the difference between the
             static/dynamic methods.
           </li>
-          <li className="mb-3">
+          <li className="mb-1">
             The <Span page="dogs" /> fetches/caches the dog images at build
             time, but all other topics are fetched/cached at runtime.
+          </li>
+          <li className="mb-3">
+            The <Span page="search" /> uses client-side fetching and a
+            server-side API route handler because user input is necessary to
+            render a photo.
           </li>
         </ul>
       </TextBox>
