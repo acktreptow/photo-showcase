@@ -64,7 +64,7 @@ function SearchPageClient(): JSX.Element {
         className="flex flex-col items-center text-xl lg:tracking-wide"
       >
         <label htmlFor="searchQuery" className="font-semibold mb-1">
-          Search Query:{" "}
+          Your Search Query:{" "}
         </label>
         <input
           type="text"
@@ -83,7 +83,12 @@ function SearchPageClient(): JSX.Element {
       </form>
 
       <div>
-        {searchResultsLoading && <p>Loading...</p>}
+        {searchResultsLoading && (
+          <div className="flex items-center justify-center space-x-3">
+            <div className="border-t-transparent border-solid animate-spin rounded-full border-teal-700 border-4 h-12 w-12"></div>
+            <p className="text-center text-lg">Loading...</p>
+          </div>
+        )}
         {searchResultsError && (
           <p>There was an error. Please try your query again.</p>
         )}
