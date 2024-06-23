@@ -6,8 +6,9 @@ import Title from "../components/Title";
 import { useState } from "react";
 import { UnsplashImage } from "../types/UnsplashImage";
 import Image from "next/image";
+import { NextResponse } from "next/server";
 
-function SearchPageClient() {
+function SearchPageClient(): JSX.Element {
   const [searchResults, setSearchResults] = useState<UnsplashImage[] | null>(
     null
   );
@@ -15,7 +16,9 @@ function SearchPageClient() {
     useState<boolean>(false);
   const [searchResultsError, setSearchResultsError] = useState<boolean>(false);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(
+    e: React.FormEvent<HTMLFormElement>
+  ): Promise<void> {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
     const searchQuery = formData.get("searchQuery")?.toString().trim();
@@ -26,7 +29,7 @@ function SearchPageClient() {
         setSearchResultsError(false);
         setSearchResultsLoading(true);
 
-        const res = await fetch(`/api/search?query=${searchQuery}`);
+        const res: Response = await fetch(`/api/search?query=${searchQuery}`);
         const images: UnsplashImage[] = await res.json();
         setSearchResults(images);
       } catch (error) {
