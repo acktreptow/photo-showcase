@@ -82,18 +82,20 @@ function SearchPageClient(): JSX.Element {
         </button>
       </form>
 
-      <div>
+      <div className="text-center text-lg">
         {searchResultsLoading && (
           <div className="flex items-center justify-center space-x-3">
             <div className="border-t-transparent border-solid animate-spin rounded-full border-teal-700 border-4 h-12 w-12"></div>
-            <p className="text-center text-lg">Loading...</p>
+            <p>Loading...</p>
           </div>
         )}
         {searchResultsError && (
-          <p>There was an error. Please try your query again.</p>
+          <p>There was a server-side error. Please try your query again.</p>
         )}
         {searchResults?.length === 0 && (
-          <p>No results found. Please try a different query.</p>
+          <p>
+            No photos found with that search query. Please try a different word.
+          </p>
         )}
       </div>
 
