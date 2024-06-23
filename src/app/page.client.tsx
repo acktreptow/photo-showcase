@@ -20,7 +20,7 @@ function HomepageClient(): JSX.Element {
   };
 
   const pages = [
-    { name: "Static", urlPath: "static" },
+    { name: "Static", urlPath: "static"},
     { name: "Dynamic", urlPath: "dynamic" },
     { name: "ISR", urlPath: "isr" },
     { name: "Dogs", urlPath: "topics/dogs" },
