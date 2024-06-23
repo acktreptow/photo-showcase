@@ -14,6 +14,7 @@ function Header(): JSX.Element {
     { name: "Dynamic", urlPath: "/dynamic" },
     { name: "ISR", urlPath: "/isr" },
     { name: "Dogs", urlPath: "/topics/dogs" },
+    { name: "Search", urlPath: "/search" },
   ];
 
   return (
@@ -23,14 +24,19 @@ function Header(): JSX.Element {
           <Image
             src={logo}
             alt="Photo Showcase logo"
-            className="w-12 rounded-sm ml-2 md:ml-5 lg:ml-10"
+            className="w-12 rounded-md ml-2 md:ml-5 lg:ml-10"
           />
         </Link>
       </div>
       <nav>
-        <ul className="flex space-x-3 mr-2 font-semibold text-lg md:space-x-4 md:mr-5 lg:space-x-5  lg:mr-10 lg:text-xl">
+        <ul className="flex space-x-3 font-semibold text-lg md:space-x-4 md:mr-5 lg:space-x-5  lg:mr-10 lg:text-xl">
           {links.map((link) => (
-            <li key={link.name} className="hover:text-zinc-300 hover:underline">
+            <li
+              key={link.name}
+              className={`hover:text-zinc-300 hover:underline ${
+                link.name === "Home" ? "hidden md:flex" : ""
+              }`}
+            >
               <Link href={link.urlPath}>{link.name}</Link>
             </li>
           ))}
