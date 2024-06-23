@@ -60,7 +60,7 @@ function HomepageClient(): JSX.Element {
             setSelectedPage(e.target.value);
             setHidden(true);
           }}
-          className="block mx-auto border-4 border-gray-500 rounded-lg p-2 mb-3 hover:border-playstation transition-colors duration-200 text-gray-800 shadow-md focus:outline-none"
+          className="block mx-auto border-4 border-gray-500 rounded-lg p-2 mb-5 hover:border-teal-900 transition-colors duration-200 text-gray-800 shadow-md focus:outline-none"
         >
           <option value="" className={`${hidden ? "hidden" : ""}`}>
             Select Showcase
