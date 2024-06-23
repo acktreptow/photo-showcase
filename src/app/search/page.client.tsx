@@ -6,6 +6,7 @@ import Title from "../components/Title";
 import { useState } from "react";
 import { UnsplashImage } from "../types/UnsplashImage";
 import Image from "next/image";
+import Span from "../components/Span";
 
 function SearchPageClient(): JSX.Element {
   const [searchResults, setSearchResults] = useState<UnsplashImage[] | null>(
@@ -44,7 +45,19 @@ function SearchPageClient(): JSX.Element {
     <Container>
       <Title title="Search Page" />
       <TextBox>
-        <p>This title is rendered client side.</p>
+        <p className="mb-5">
+          The <Span page="search" /> is the only one in the photo showcase that
+          fetches data on the client side because user input is necessary to
+          render a photo. This of course happens dynamically as the app cannot
+          predetermine the word at build time.
+        </p>
+        <p>
+          However due to the user directly interacting with the page, the actual
+          GET request to the Unsplash API is sent via a Next.js route handler
+          that runs on the server. This is because my personal credentials that
+          give me access to Unsplash would otherwise be leaked in the page
+          source of the device that you&#39;re currently on.
+        </p>
       </TextBox>
       <form
         onSubmit={handleSubmit}
