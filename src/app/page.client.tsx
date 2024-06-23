@@ -24,6 +24,7 @@ function HomepageClient(): JSX.Element {
     { name: "Dynamic", urlPath: "dynamic" },
     { name: "ISR", urlPath: "isr" },
     { name: "Dogs", urlPath: "topics/dogs" },
+    { name: "Search", urlPath: "search" },
   ];
 
   return (
