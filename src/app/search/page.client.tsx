@@ -51,10 +51,10 @@ function SearchPageClient(): JSX.Element {
           happens dynamically as the app can&#39;t know your word at build time.
         </p>
         <p>
-          However, the actual GET request to the Unsplash API is sent via a
-          server-based Next.js route handler. This is because my credentials
-          granting access to Unsplash would otherwise be leaked in the page
-          source of your device (the client).
+          However, the GET request to the Unsplash API is sent via a
+          server-based Next.js API route handler. Otherwise my credentials
+          granting Unsplash access would leak in the page source of your device
+          (the client).
         </p>
       </TextBox>
       <form
@@ -73,7 +73,7 @@ function SearchPageClient(): JSX.Element {
         />
         <button
           type="submit"
-          className="block mx-auto border p-4 mb-5 bg-teal-700 text-white rounded-full hover:bg-teal-900 transition-colors duration-200 shadow-md shadow-teal-700"
+          className="block mx-auto border p-4 mb-10 bg-teal-700 text-white rounded-full hover:bg-teal-900 transition-colors duration-200 shadow-md shadow-teal-700"
           disabled={searchResultsLoading}
         >
           View Your Photo Showcase
