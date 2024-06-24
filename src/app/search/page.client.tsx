@@ -46,10 +46,9 @@ function SearchPageClient(): JSX.Element {
       <Title title="Search Page" />
       <TextBox>
         <p className="mb-5">
-          The <Span page="search" /> is the only one in the photo showcase that
-          fetches data on the client side because user input is necessary to
-          render a photo. This happens dynamically as the app cannot
-          predetermine the word at build time.
+          The <Span page="search" /> is the only page that fetches data
+          client-side because user input is needed to render photos. This
+          happens dynamically as the app can&#39;t know your word at build time.
         </p>
         <p>
           However due to the user directly interacting with the page, the actual
