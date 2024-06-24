@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Photo Showcase",
   },
   description:
-    "An app showcasing photos through various different caching strategies",
+    "An app showcasing photos through various different fetching and caching strategies",
 };
 
 export default function RootLayout({
