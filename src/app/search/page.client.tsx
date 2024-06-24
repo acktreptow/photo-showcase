@@ -51,11 +51,10 @@ function SearchPageClient(): JSX.Element {
           happens dynamically as the app can&#39;t know your word at build time.
         </p>
         <p>
-          However due to the user directly interacting with the page, the actual
-          GET request to the Unsplash API is sent via a Next.js route handler
-          that runs on the server. This is because my personal credentials that
-          give me access to Unsplash would otherwise be leaked in the page
-          source of the device that you&#39;re currently on.
+          However, the actual GET request to the Unsplash API is sent via a
+          server-based Next.js route handler. This is because my credentials
+          granting access to Unsplash would otherwise be leaked in the page
+          source of your device (the client).
         </p>
       </TextBox>
       <form
