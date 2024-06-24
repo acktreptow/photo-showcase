@@ -98,7 +98,7 @@ function SearchPageClient(): JSX.Element {
       </div>
 
       {searchResults && (
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:p-5 lg:p-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:p-5 lg:p-10">
           {searchResults.slice(0, 6).map((image: UnsplashImage) => (
             <Image
               src={image.urls.regular}

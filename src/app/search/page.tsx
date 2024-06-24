@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Search",
-  description: "Showcasing dynamic rendering in Next.js through photos",
+  description: "Showcasing client-side fetching in Next.js through photos",
 };
 
 function SearchPage(): JSX.Element {

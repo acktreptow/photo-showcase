@@ -8,8 +8,9 @@ import TextBox from "../components/TextBox";
 import Span from "../components/Span";
 
 export const metadata: Metadata = {
-  title: "Dynamic Rendering",
-  description: "Showcasing dynamic rendering in Next.js through photos",
+  title: "ISR",
+  description:
+    "Showcasing incremental static regeneration in Next.js through photos",
 };
 export const revalidate = 5;
 
