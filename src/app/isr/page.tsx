@@ -36,16 +36,17 @@ async function IsrPage(): Promise<JSX.Element> {
       <TextBox>
         <p className="mb-5">
           The <Span page="incremental static regeneration" /> is a hybrid of the
-          static/dynamic methods. The page is generated statically, but it can
-          regenerate after 5 seconds to fetch a new image from the Unsplash API.
+          static and dynamic methods. The page is generated statically, but it
+          can regenerate after 5 seconds to fetch a new photo from the Unsplash
+          API.
         </p>
         <p className="mb-5">
-          A page refresh is however needed to see the new image because it
-          can&#39;t update content without a new request.
+          A page refresh is however needed to see the new photo because it
+          can&#39;t update any content without a new fetch request.
         </p>
         <p>
           Doing so will also not cause the full page to regenerate, only dynamic
-          parts such as the image and its data. There will be no change if the
+          parts such as the photo and its data. There will be no change if the
           refresh occurs within 5 seconds.
         </p>
       </TextBox>
