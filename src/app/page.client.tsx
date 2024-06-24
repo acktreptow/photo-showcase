@@ -8,7 +8,7 @@ import Title from "./components/Title";
 import TextBox from "./components/TextBox";
 import Span from "./components/Span";
 import linksData from "../app/data/links.json";
-import { pageLink } from "../app/types/PageLink";
+import { PageLink } from "../app/types/PageLink";
 
 function HomepageClient(): JSX.Element {
   const [selectedPage, setSelectedPage] = useState<string>("");
@@ -66,8 +66,8 @@ function HomepageClient(): JSX.Element {
             Select Showcase
           </option>
           {linksData
-            .filter((link: pageLink) => link.name !== "Home")
-            .map((link: pageLink) => (
+            .filter((link: PageLink) => link.name !== "Home")
+            .map((link: PageLink) => (
               <option key={link.name} value={link.urlPath}>
                 {link.name}
               </option>

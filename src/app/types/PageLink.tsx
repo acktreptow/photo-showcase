@@ -1,4 +1,4 @@
-export type pageLink = {
+export type PageLink = {
   name: string;
   urlPath: string;
 };

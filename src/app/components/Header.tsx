@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../../../public/images/logo.png";
 import linksData from "../data/links.json";
-import { pageLink } from "../types/PageLink";
+import { PageLink } from "../types/PageLink";
 
 function Header(): JSX.Element {
   return (
@@ -18,7 +18,7 @@ function Header(): JSX.Element {
       </div>
       <nav>
         <ul className="flex space-x-3 font-semibold text-lg md:space-x-4 md:mr-5 lg:space-x-5 lg:mr-10 lg:text-xl">
-          {linksData.map((link: pageLink) => (
+          {linksData.map((link: PageLink) => (
             <li
               key={link.name}
               className={`hover:text-zinc-300 hover:underline ${
