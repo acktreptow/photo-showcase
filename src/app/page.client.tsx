@@ -26,16 +26,16 @@ function HomepageClient(): JSX.Element {
       <Title title="Photo Showcase" />
       <TextBox>
         <p className="mb-3 text-center">
-          Photo Showcase is a Next.js app that fetches and caches data
-          differently depending on the page visited.
+          Photo Showcase is a Next.js app that fetches and caches Unsplash
+          photos differently depending on the page.
         </p>
         <ul className="list-disc ml-5">
           <li className="mb-1">
-            The <Span page="static" /> fetches and caches the Unsplash API data
-            at build time.
+            The <Span page="static" /> fetches and caches Unsplash API data at
+            build time.
           </li>
           <li className="mb-1">
-            The <Span page="dynamic" /> fetches the API data at runtime and
+            The <Span page="dynamic" /> fetches the data at runtime and
             doesn&#39;t cache it.
           </li>
           <li className="mb-1">
@@ -43,8 +43,8 @@ function HomepageClient(): JSX.Element {
             static/dynamic methods.
           </li>
           <li className="mb-1">
-            The <Span page="dogs" /> fetches/caches the dog images at build
-            time, but all other topics are fetched/cached at runtime.
+            The <Span page="dogs" /> fetches/caches dog photos at build time,
+            but all other topics are fetched/cached at runtime.
           </li>
           <li className="mb-3">
             The <Span page="search" /> uses client-side fetching and a
