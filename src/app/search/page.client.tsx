@@ -1,11 +1,11 @@
 "use client";
 
+import Image from "next/image";
+import { useState } from "react";
+import { UnsplashImage } from "../types/UnsplashImage";
 import Container from "../components/Container";
 import TextBox from "../components/TextBox";
 import Title from "../components/Title";
-import { useState } from "react";
-import { UnsplashImage } from "../types/UnsplashImage";
-import Image from "next/image";
 import Span from "../components/Span";
 
 function SearchPageClient(): JSX.Element {
