@@ -32,7 +32,7 @@ async function TopicPage({
       <TextBox>
         <p className="mb-5">
           The <Span page="topics" /> uses the topic parameter to fetch 12
-          related photos from the Unsplash API. While the dog photos are static
+          related from the Unsplash API. While the dog photos are static
           because they were fetched/cached at build time, other topics are
           dynamic.
         </p>
