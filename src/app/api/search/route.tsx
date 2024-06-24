@@ -1,11 +1,11 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import { UnsplashImage } from "@/app/types/UnsplashImage";
 
 type UnsplashSearchResponse = {
   results: UnsplashImage[];
 };
 
-export async function GET(request: Request): Promise<NextResponse> {
+export async function GET(request: NextRequest): Promise<NextResponse> {
   const { searchParams } = new URL(request.url);
   const searchQuery = searchParams.get("query");
 
