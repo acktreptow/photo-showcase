@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/app/components/Container";
 import Title from "@/app/components/Title";
@@ -5,7 +6,13 @@ import TextBox from "@/app/components/TextBox";
 import Image from "next/image";
 import homepageImg from "../../public/images/homepage-photo.png";
 
-export default function NotFound() {
+export const metadata: Metadata = {
+  title: "404 Not Found",
+  description:
+    "Oops! The page you're looking for doesn't exist. Please navigate to another page.",
+};
+
+export default function NotFound(): JSX.Element {
   return (
     <Container>
       <Title title="404 Not Found" />
@@ -16,10 +23,7 @@ export default function NotFound() {
         </p>
       </TextBox>
       <Link href="/">
-        <button
-          type="submit"
-          className="block mx-auto border p-4 mb-10 bg-teal-700 text-white rounded-full hover:bg-teal-900 transition-colors duration-200 shadow-md shadow-teal-700"
-        >
+        <button className="block mx-auto border p-4 mb-10 bg-teal-700 text-white rounded-full hover:bg-teal-900 transition-colors duration-200 shadow-md shadow-teal-700">
           Return To Homepage
         </button>
       </Link>
