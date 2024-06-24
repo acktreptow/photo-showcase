@@ -35,9 +35,9 @@ async function DynamicPage(): Promise<JSX.Element> {
       <Title title="Dynamic Page" />
       <TextBox>
         <p>
-          This is the <Span page="dynamic" /> because it doesn&#39;t cache the
-          data fetched from the Unsplash API. You will therefore always see a
-          new image with every page refresh.
+          The <Span page="dynamic" /> doesn&#39;t cache the data fetched from
+          the Unsplash API. You will therefore always see a new Unsplash photo
+          with every page refresh.
         </p>
       </TextBox>
       <Image
