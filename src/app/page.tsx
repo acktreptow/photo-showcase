@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Showcasing photos through various fetching and caching strategies",
 };
 
-function Homepage() {
+function Homepage(): JSX.Element {
   return <HomepageClient />;
 }
 
