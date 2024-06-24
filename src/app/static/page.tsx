@@ -8,7 +8,7 @@ import TextBox from "../components/TextBox";
 import Span from "../components/Span";
 
 export const metadata: Metadata = {
-  title: "Static Rendering",
+  title: "Static",
   description: "Showcasing static rendering in Next.js through photos",
 };
 
