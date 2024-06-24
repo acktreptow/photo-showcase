@@ -17,7 +17,7 @@ function Header(): JSX.Element {
         </Link>
       </div>
       <nav>
-        <ul className="flex space-x-3 font-semibold text-lg md:space-x-4 md:mr-5 lg:space-x-5  lg:mr-10 lg:text-xl">
+        <ul className="flex space-x-3 font-semibold text-lg md:space-x-4 md:mr-5 lg:space-x-5 lg:mr-10 lg:text-xl">
           {linksData.map((link: pageLink) => (
             <li
               key={link.name}
