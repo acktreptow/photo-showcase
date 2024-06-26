@@ -2,7 +2,7 @@
 
 Welcome to the Photo Showcase! A tour through various Next.js fetching/caching strategies available in the React framework, showcased through Unsplash photos.
 
-To view the showcases, click [here](https://photo-showcase-theta.vercel.app/)!
+To view the different showcases, click [here](https://photo-showcase-theta.vercel.app/)!
 
 ## Technologies Used
 
@@ -13,15 +13,15 @@ To view the showcases, click [here](https://photo-showcase-theta.vercel.app/)!
 
 ## Project Overview
 
-Whether it's working on gaming "bullshots", thumbnails for my YT channel or just general editing of usual nature-focused photos, I love working with images.
+Whether it's working on gaming "bullshots", thumbnails for my YT channel, or just general editing of usually nature-focused photos, I love working with images.
 
-That's why the Unsplash API was the perfect choice for this project! Not only could I could learn from all the endless refreshing of Unsplash photos to improve my own, but it would also help me further improve my Next.js skills. Especially working with the more backend parts of the framework like Next API route handlers.
+That's why the Unsplash API was the perfect choice for this project! I learned new techniques from the myriad Unsplash photos I viewed making the showcases. Implementing the various fetching and caching pages also further improve my Next.js skills. Especially the final page, where I got to begin working with the more backend parts of the framework like Next API route handlers.
 
 The app also uses TypeScript for clean code and Tailwind CSS to display the Unsplash photos and their data in very different ways, depending on the page and device being used.
 
 ### Homepage
 
-The homepage serves as the landing page of the store, providing navigation to other sections of the website as well as some starter information about each of them.
+The homepage serves as the landing page, providing navigation to other sections and some introductory information about each of them.
 
 ### Static Page
 
