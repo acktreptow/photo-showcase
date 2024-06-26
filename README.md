@@ -1,6 +1,6 @@
 # Photo Showcase
 
-Welcome to the Photo Showcase! A tour through various Next.js fetching/caching strategies available in the React framework, showcased through Unsplash photos.
+Welcome to the Photo Showcase! This project explores various Next.js fetching and caching strategies, showcased through Unsplash photos.
 
 To view the different showcases, click [here](https://photo-showcase-theta.vercel.app/)!
 
@@ -13,11 +13,10 @@ To view the different showcases, click [here](https://photo-showcase-theta.verce
 
 ## Project Overview
 
-Whether it's working on gaming "bullshots", thumbnails for my YT channel, or just general editing of usually nature-focused photos, I love working with images.
+I love working with images, whether it's gaming "bullshots," thumbnails for my YouTube channel, or general nature-focused photo editing. The Unsplash API was therefore the perfect choice for this project because it helped me achieve both of my goals:
 
-That's why the Unsplash API was the perfect choice for this project! I learned new techniques from the myriad Unsplash photos I viewed making the showcases. Implementing the various fetching and caching pages also further improve my Next.js skills. Especially the final page, where I got to begin working with the more backend parts of the framework like Next API route handlers.
-
-The app also uses TypeScript for clean code and Tailwind CSS to display the Unsplash photos and their data in very different ways, depending on the page and device being used.
+1. I learned new techniques from the myriad Unsplash photos I viewed while making the showcases, which I can now incorporate into my own.
+2. My Next.js skills significantly improved by implementing various fetching and caching techniques on each page, especially the final page where I gained experience with backend aspects like Next API route handlers.
 
 ### Homepage
 
@@ -37,11 +36,11 @@ This is a hybrid of the static and dynamic methods. The page is generated static
 
 ### Dogs/topics Page
 
-This page uses the topic parameter to fetch 12 related from the Unsplash API. While the dog photos are static because they were fetched/cached at build time, other topics are dynamic.
+This page uses the topic parameter to fetch 12 related from the Unsplash API. While the dog photos are static because they were fetched/cached at build time, other topics are dynamic. These are fetched/rendered on first access, then cached for subsequent visits (photos won't change on refresh).
 
 ### Search Page
 
-The only page that fetches data client-side because user input is needed to render photos. However, the GET request to the Unsplash API is sent via a server-based Next.js API route handler. Otherwise credentials would leak.
+The only page that fetches data client-side because user input is needed to render photos. However, the GET request to the Unsplash API is sent via a server-based Next.js API route handler. Otherwise my credentials granting Unsplash access would leak in the page source of your device (the client).
 
 ## Installation
 
@@ -64,11 +63,11 @@ Contributions are welcome! To do so, please follow these steps:
 
 ## Contact
 
-If you’d like to contribute, have questions, or want to provide feedback, please reach out to me at [alex@treptow.dev](mailto:alex@treptow.dev)
+If you’d like to contribute, have questions, or want to provide feedback, please reach out to me at [alex@treptow.dev](mailto:alex@treptow.dev).
 
 ## Future Enhancements
 
-There's no plans for any significant updates unless someone contributes with a great feature that I didn't think of.
+There are no plans for significant updates unless someone contributes a great feature that I hadn't considered.
 
 ## License
 
