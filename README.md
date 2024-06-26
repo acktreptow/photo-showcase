@@ -36,11 +36,11 @@ This is a hybrid of the static and dynamic methods. The page is generated static
 
 ### Dogs/topics Page
 
-This page uses the topic parameter to fetch 12 related from the Unsplash API. While the dog photos are static because they were fetched/cached at build time, other topics are dynamic. These are fetched/rendered on first access, then cached for subsequent visits (photos won't change on refresh).
+This page uses the topic parameter to fetch 12 related photos from the Unsplash API. While the dog photos are static because they were fetched/cached at build time, other topics are dynamic. These are fetched/rendered on first access, then cached for subsequent visits (photos won't change on refresh).
 
 ### Search Page
 
-The only page that fetches data client-side because user input is needed to render photos. However, the GET request to the Unsplash API is sent via a server-based Next.js API route handler. Otherwise my credentials granting Unsplash access would leak in the page source of your device (the client).
+The only page that fetches data client-side because user input is needed to render photos. However, the GET request to the Unsplash API is sent via a server-based Next.js API route handler. This prevents my Unsplash access credentials from leaking in the page source of your device (the client).
 
 ## Installation
 
