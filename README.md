@@ -1,6 +1,6 @@
 # Photo Showcase
 
-Welcome to the Photo Showcase! This project explores various Next.js fetching and caching strategies, showcased through Unsplash photos.
+Welcome to Photo Showcase! This project explores various Next.js fetching and caching strategies, showcased through Unsplash photos.
 
 To view the different showcases, click [here](https://photo-showcase-theta.vercel.app/)!
 
@@ -13,10 +13,10 @@ To view the different showcases, click [here](https://photo-showcase-theta.verce
 
 ## Project Overview
 
-I love working with images, whether it's gaming "bullshots," thumbnails for my YouTube channel, or general nature-focused photo editing. The Unsplash API was therefore the perfect choice for this project because it helped me achieve both of my goals:
+Whether it's thumbnails for my YouTube channel, taking far too many pictures of my dog, or general photo editing, I love working with images. The Unsplash API was therefore the perfect choice for this project because it allowed me to achieve both of my goals:
 
 1. I learned new techniques from the myriad Unsplash photos I viewed while making the showcases, which I can now incorporate into my own.
-2. My Next.js skills significantly improved by implementing various fetching and caching techniques on each page, especially the final page where I gained experience with backend aspects like Next API route handlers.
+2. My Next.js skills significantly improved as I went through the trial and errors of implementing the various fetching and caching techniques on each page. I especially felt this growth on the final page, where I gained experience with backend aspects like Next API route handlers.
 
 ### Homepage
 
